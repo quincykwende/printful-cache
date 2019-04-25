@@ -22,8 +22,7 @@ class FileCache implements CacheInterface{
 	public function __construct()
     {
         //get cache directory from file config
-        $config = include_once "../config/printful-cache.php";
-
+        $config = include_once "./config/printful-cache.php";
         $this->directory = $config['directory'];
         $this->files = new File();
     }

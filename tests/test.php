@@ -9,7 +9,7 @@
 
 	//$file = new File();
 
-	//var_dump($dd->set("ss", "dddd", 60));
+	var_dump($dd->set("ss", "dddd", 60));
 
 	var_dump($dd->get("ss"));
 
