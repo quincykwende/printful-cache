@@ -1,7 +1,7 @@
 <?php
 
 //Defining the namespace
-namespace Quincykwende\PrintfulCache;
+namespace PrintfulCache;
 
 class File {
 

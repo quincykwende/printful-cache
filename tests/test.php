@@ -2,8 +2,8 @@
 
 	require_once __DIR__.'/../vendor/autoload.php';
 
-	use Quincykwende\PrintfulCache\FileCache;
-	use Quincykwende\PrintfulCache\File;
+	use PrintfulCache\FileCache;
+	use PrintfulCache\File;
 
 	$dd = new FileCache();
 

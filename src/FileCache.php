@@ -1,10 +1,10 @@
 <?php
 
 //Defining the namespace
-namespace Quincykwende\PrintfulCache;
+namespace PrintfulCache;
 use Exception;
-use Quincykwende\PrintfulCache\File;
-use Quincykwende\PrintfulCache\CacheInterface;
+use PrintfulCache\File;
+use PrintfulCache\CacheInterface;
 
 class FileCache implements CacheInterface{
 

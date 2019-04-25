@@ -2,7 +2,7 @@
 //Reference: https://gist.github.com/briedis/d14c4fd416bab8b8b8b873a8d677a0a6
 
 //Defining the namespace
-namespace Quincykwende\PrintfulCache;
+namespace PrintfulCache;
 
 interface CacheInterface
 {
