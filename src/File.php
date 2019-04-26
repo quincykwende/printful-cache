@@ -16,10 +16,11 @@ class File {
     public function get($path)
     {
         /**
-        instead of using file_get_content with is more trivial; this approach is preferably in case a file is already open. 
-        For this task it wouldn't be important because only one person will 
-        be testing my work; However, if it is deployed to production and a 
-        file is already open by another instance; then we would be in trouble :) 
+        * instead of using file_get_content with is more trivial; 
+        * this approach is preferably in case a file is already open. 
+        * For this task it wouldn't be important because only one person will 
+        * be testing ; However, if it is deployed to production and a 
+        * file is already open by another instance; then we would be in trouble :) 
         **/
         try{
             $content = null;
