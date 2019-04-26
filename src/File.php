@@ -22,21 +22,26 @@ class File {
         file is already open by another instance; then we would be in trouble :) 
         **/
         try{
-            $content = '';
-            $handle = fopen($path, 'rb');
+            $content = null;
+            //check if file exist 
+            if (file_exists($filename)) {
+                $handle = fopen($path, 'rb');
 
-            if($handle){
-                try{
-                    if(flock($handle, LOCK_SH)){
-                        clearstatcache(true, $path);
-                        $content = fread($handle, filesize($path) ?: 1);
-                        flock($handle, LOCK_UN);
+                if($handle){
+                    try{
+                        if(flock($handle, LOCK_SH)){
+                            clearstatcache(true, $path);
+                            $content = fread($handle, filesize($path) ?: 1);
+                            flock($handle, LOCK_UN);
+                        }
+                    }finally {
+                        fclose($handle);
                     }
-                }finally {
-                    fclose($handle);
                 }
+                return $content;
+            }else{
+                return null;
             }
-            return $content;
         }catch(Exception $e){
             echo $e->getMessage();
         }
