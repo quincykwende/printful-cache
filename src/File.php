@@ -24,7 +24,7 @@ class File {
         try{
             $content = null;
             //check if file exist 
-            if (file_exists($filename)) {
+            if (file_exists($path)) {
                 $handle = fopen($path, 'rb');
 
                 if($handle){
